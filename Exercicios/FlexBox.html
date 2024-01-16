@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Flex Box</title>
+        <style>
+            header {
+                background-color:blueviolet;
+                text-align: center;
+            }
+
+            main {
+                background-color: burlywood;
+                margin-bottom: 20px;
+                
+            }
+            .bloco-1 {
+                background-color: cadetblue;
+                width: 100px;
+                /* height: 200px; */
+                text-align: center;
+            }
+            .bloco-2 {
+                background-color: chartreuse;
+                width: 100px;
+                /* height: 200px; */
+                text-align: center;
+            }
+            .bloco-3 {
+                background-color: crimson;
+                width: 100px;
+                /* height: 200px; */
+                text-align: center;
+            }
+            .container {
+                display: flex; /*Posiciona os elementos(divs) Horizontalmente*/
+                /* justify-content: space-around; */  /*Já espaça os blocos horizontalmente*/
+                /* flex-direction: row-reverse; */  /*INverte os blocos horizontalmente. 3 - 2 - 1  */
+                justify-content: center;
+                border: solid 1px black;
+                height: 350px;
+                align-items: baseline;/*faz o tamanho vertical dos blocos(1,2 e 3) ficarem automaticos de acordo c o conteúdo dentro*/
+                /* Obs:isso se vc não epecificar um tamanho verticar p os blocos. como lá em cima => height: 200px;  */
+                /* align-items: center;  /*centraliza tudo no meio do container verticalmente*/
+                gap: 10px 30px; /* row-gap column gap */
+                padding: 16px; /* Dá p usar padding normalmente tb */
+                
+            }
+
+            footer {
+                color: white;
+                background-color: black;
+                text-align: center;
+            }
+
+            #teste {
+                background-color: blueviolet;
+                height: 300px;
+                /* display: flex; */
+                /* justify-content: center; */  /*Centraliza horizontalmente*/
+                /* align-items: center; */      /*Centraliza verticalmente*/
+                
+                
+            }
+            
+            .d1 {
+                background-color: chartreuse;
+                height: 50px;
+                width: 90%;
+                position: relative;
+                margin: 0 auto;
+               
+             
+                
+            } 
+
+            .d2 {
+                background-color: chocolate;
+                height: 50px;
+                width: 100%;
+                position: absolute;
+                top: 4px;
+            }
+
+            .d3 {
+                background-color: rgb(75, 113, 116);
+                height: 50px;
+                width: 100%;
+                position: absolute;
+                top: 4px;
+                
+            }
+0
+            p.tst:hover {   /* Pseudo-classe  */
+                font-size: 20px;
+                color:white;
+            }
+           
+        </style>
+    </head>
+    <body>
+        <header>
+            <h2>FlexBox</h2>
+        </header>
+
+        <main class="container">
+            <div class="bloco-1">
+                1
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi maiores officiis ducimus corrupti quidem</p>
+            </div>
+
+            <div class="bloco-2">
+                2
+                <p>Tamanho vertical automatico 2</p>
+            </div>
+
+            <div class="bloco-3">
+                3
+            </div>
+
+           
+        </main>
+        <hr>
+        <div id="teste">
+            
+            <div class="d1"> 
+                  
+                <div class="d2"> <!-- Esse d2 está dentro do d1 portanto por cima dele -->
+
+                    <div class="d3"><!-- Esse d3 está dentro do d2 portanto por cima dele -->
+                       <p class="tst">d3</p>
+                    </div>
+
+                </div>
+
+            </div> 
+           
+
+        </div>
+
+        <footer>
+            <p>footer</p>
+     
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt molestias suscipit dolores tempore totam? Doloremque minus neque quam sunt ut totam maiores mollitia beatae labore quas, eos, illum expedita at.</p>
+        </footer>
+       
+        <script>
+        
+        </script>
+    </body>
+</html>
+
+
+
+
+
+
+

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabuada</title>
+    <link rel="stylesheet" href="estilo1.css">
+</head>
+<body onload="carregar()">
+    <header>
+        <h1>Par ou Impar</h1>
+    </header>
+
+
+    <section>
+        <div>
+            <p>Saber se Número é Par ou Impar</p>
+            <!-- Ou seja se o número for divisível por 2 dando resto 0 ele é um numero Par -->
+            <p>Número <input type="text" name="number" id="txtn"></p>
+            
+            
+            <p><input type="button" value="Verificar" onclick="parImpar()"></p>
+            <p><input type="button" value="Verificar c função return" id="btn2"></p>
+        </div>
+
+        <div id="res"><!-- div 2 -->
+            
+            <!-- Não quero criar o elemento select/option assim e sim de forma dinâmica atraves do JS -->
+            <!-- <select name="tabuada" id="seltab" size="10"> 
+                <option value="v1">Valor1</option>
+                <option value="v2">Valor2</option>
+                <option value="v3">Valor3</option>
+                <option value="v4">Valor4</option>
+                <option value="v5">Valor5</option>
+                <option value="v6">Valor6</option>
+                <option value="v7">Valor7</option>
+                <option value="v8">Valor8</option>
+                <option value="v9">Valor9</option>
+                <option value="v10">Valor10</option>
+            </select>-->
+            
+           
+            <!-- p dar a resposta da tabuada nessa div -->
+            <div id="res2">
+                Resposta
+            </div>
+           
+            
+        </div>
+    </section>
+
+
+    <footer>
+        &copy; Curso em Video
+    </footer>
+
+    <script src="script5.js"></script>
+</body>
+</html>

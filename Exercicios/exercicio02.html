@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verificador de Idade</title>
+    <link rel="stylesheet" href="estilo1.css">
+</head>
+<body>
+    <header>
+        <h1>Verificador de Idade</h1>
+    </header>
+
+
+    <section>
+        <div>
+            <p>Ano de Nascimento</p>
+            <input type="number" name="txtano" id="txtano">
+
+            <p>Sexo</p>
+            <input type="radio" name="radsex" id="masc">
+            <label for="mas">Masculino</label>
+            <input type="radio" name="radsex" id="fem">
+            <label for="fem">Feminino</label>
+            <p><input type="button" value="Verificar" onclick="verificar()"></p>
+        </div>
+
+        <div id="res">
+            <!--Aqui vai aparecer/ser criada, a img dinâmica atravéz do JS  -->
+        </div>
+    </section>
+
+
+    <footer>
+        &copy;Curso em Video
+    </footer>
+
+    <script src="script2.js"></script>
+</body>
+</html>

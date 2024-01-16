@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Somando Números</title>
+</head>
+<body>
+    <h1>Somando Valores</h1>
+    <input type="text" name="txtn1" id="txtn1"> +
+    <input type="text" name="txtn2" id="txtn2">
+    <input type="button" value="somar" onclick="somar()">
+    
+    <div id="res">Resultado</div>
+    <div id="hours">Hora</div>
+
+    <script>
+        function somar(){
+       
+        var tn1 = document.getElementById('txtn1');
+        var tn2 = document.getElementById('txtn2');
+        var n1 = parseInt(tn1.value);//Poderia tb - Number(tn1.value); p transformar texto em número
+        var n2 = parseInt(tn2.value);//Poderia tb - Number(tn2.value); p transformar texto em número
+        var s = n1 + n2;
+        document.getElementById("res").innerHTML = s;
+        hora();//Chamando a função hora
+        
+        }
+
+        function hora(){
+            var agora = new Date();
+            var hora = agora.getHours();
+            document.getElementById('hours').innerHTML = hora  + ' horas';
+        }
+       
+
+
+
+    </script>
+   
+</body>
+</html>

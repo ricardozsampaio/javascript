@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primeiros passos com DOM</title>
+    <style>
+        body {
+            background-color: blueviolet;
+            color: white;
+            font: normal 18px arial;
+        }
+    </style>
+</head>
+<body>
+    <!-- DOM - Document Object Model ou seja Modelo de Objetos p Documentos -->
+    <!-- DOM é um Conjunto de Objetos dentro do seu navegador q vai dar acesso aos componentes(elementos)
+     internos do seu site -->
+     <!-- Obs: O DOM não funciona dentro do node.js ou seja ele só está presente quando estou rodando o javascript
+         dentro do Navegador -->
+    <h1>Inicando estudos com DOM</h1>
+    <p>Aqui vai o resultado</p>
+    <p>Aprendendo a usar o <strong>DOM</strong> em JavaScript</p>
+    <div id="msg">clique em mim!</div>
+    <div name="msg2">clique em mim2!</div>
+    <div class="msg3">clique em mim3!</div>
+    <br><br>
+    <div id="msg4">clique em mim4!</div>
+    <br>
+
+    <!--Acessando as divs por querySelector  -->
+    <div id="msg5">clique em mim5</div>
+    <br>
+    <div class="msg6">clique em mim6</div>
+
+
+
+    <br><br><br><br>
+    <h1>JavaScript</h1>
+    <script>
+        window.document.write('Escrevendo no document via js');//Escrevendo no document através do método write do objeto document.
+        window.document.write('<br>');
+        window.document.write(window.document.charset);//Mostrando o Objeto charset(q é o UTF-8) q é a configuração da página.
+        window.document.write('<br>');
+        window.document.write(window.navigator.appCodeName);//Mostrando o Objeto navegador (q é o navegador atual).
+        window.document.write('<br>');
+        window.document.write(window.document.URL)//Mostrando a url q vc está usando.
+        //Então consigo ter acesso a vários componentes utilizando diretamente DOM dentro do meu javascript
+
+    </script>
+    <!-- DOM - Uma coisa q vc deve conhecer e saber é fazer a Arvore DOM do seu site -->
+    <!-- Basicamente essa Arvore DOM começa da Raiz e essa raiz(dentro do navegador) chamamos de window.
+    Então tudo dentro do javascript está dentro de um objeto chamado window(que quer dizer janela)
+    Então aquela Janela do seu Navegador é um objeto DOM e ele(o objeto) se chama window. -->
+    <!-- Dentro do window tem vários outros objetos como por ex:
+      - location(objeto location) - objeto q diz a localização do seu site ou seja a url, qual a página atual, etc..
+      - document(objeto document) - Que vamos usar muito, é o Documento Atual 
+      - history(objeto history) - Vai guardando da onde vc veio e p onde vc vai...
+        e temos vários outros objetos
+    -->
+    <br><br><br>
+    <h2>Navegando pela Arvore do DOM - Acessando os elementos</h2>
+    <!-- NAVEGANDO PELA ARVORE DO DOM -->
+    <!-- Existe várias maneiras de navegar atravéz dos elementos(tudo q está na arvore DOM). Para isso vc tem q 
+        Selecionar os Elementos -->
+    <!--MÉTODOS P SELECIONAR OS ELEMENTOS  -->
+    <script>
+        //1 - Por Marca(por Tag) - getElementsByTagName
+        var p1 = document.getElementsByTagName('p')[0];//Selecionando o Primeiro Parágrafo da Página por tagName.
+        document.write('Por marca(tagName) - ' + p1.innerHTML);//escreve na tela o parágrafo selecionado.
+        p1.style.color = 'blue';//Posso tb mudar a cor do parágrafo selecionado.
+
+    </script>
+    <!-- Acessando e mexendo c o body -->
+    <script>
+        var corpo = document.body;//seleciona o body e coloca na variável corpo
+        corpo.style.backgroundColor = '#666';//troca a cor de fundo do body.
+    </script>
+    
+    
+    <script>
+        //2 - Por Id - getElementById() - utilizado se o elemento tem um Id
+        //Ex:
+        var d = document.getElementById('msg');
+        d.style.backgroundColor = 'green';
+        d.innerHTML = 'Mudando o conteúdo dessa div através do JS';
+        //document.getElementById('msg').innerHTML = 'Mudando o conteúdo dessa div através do JS'. - Pode fazer direto tb. Sem variável.
+
+        //3 - Por Name - getElementsByName() - utilizado se o elemento ter um Name
+        var d2 = document.getElementsByName('msg2')[0];//Primeiro elem. c name. assim sua posição é [0].
+        d2.style.backgroundColor = 'red';
+        
+        //4 - Por Classe - getElementsByClassName() - utilizado se o elemento tiver uma classe 
+        var d3 = document.getElementsByClassName('msg3')[0];//Primeiro elem. c class. assim sua posição é [0].
+        d3.style.backgroundColor = 'yellow';
+
+      </script>
+
+      <!-- Vc pode fazer os comando tb, DIRETO SEM USAR VARIÁVEL -->
+      <!-- Ex: -->
+      <script>
+          document.getElementById('msg4').innerHTML = 'Acessando a div msg4 via JS';
+          document.getElementById('msg4').style.backgroundColor = 'yellow';
+          document.getElementById('msg4').style.color = 'black';
+      </script>
+
+      <script>
+        //5 - Por Seletor - querySelector() / querySelectorAll() 
+        var d5 =  document.querySelector('div#msg5'); //Ultiliza # pois na div no html está o id(id='msg5'). 
+        d5.style.backgroundColor = 'blue';
+        d5.innerHTML = 'Acessando a div msg5 via JS com querySelector()';
+
+        var d6 = document.querySelector('div.msg6');//Ultiliza . pois na div no html está o id(class='msg6'). 
+        d6.style.backgroundColor = 'blue';
+        d6.innerHTML = 'Acessando a div msg6 via JS com querySelector()';
+      </script>
+
+    
+      
+    
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Fatorial</title>
+    </head>
+    <body>
+        <!--FATORIAL DE UM NÚMERO-->
+        <!--EX: Fatorial de 5 -->
+        <!--O Fatorial de 5 é 5 x 4 x 3 x 2 x 1 = 120 -->
+        <script>
+            function fatorial(n){
+                var fat = 1
+                for (var c = n; c > 1; c--){
+                    fat *= c;//fat = fat * c ou seja fat recebe fat * c (ou seja 5 x 4 x 3 x 2 x 1 )
+                }
+                return fat;
+            }  
+            var resultadoFatorial = fatorial(5);//chamada da função
+            document.write(resultadoFatorial);  
+
+        </script>
+    </body>
+</html>
+
+
+
+
+
+
+

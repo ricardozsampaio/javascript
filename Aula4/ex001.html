@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <h1>Olá, Mundo!</h1>
+   <p>Me livrei da maldição.</p>
+   
+   <script>
+       /*window.alert('Minha primeira mensagem!');
+       window.confirm('Está gostando de JS?');*/
+      var nome = 'Gustavo';
+      var idade = 51;
+      var nota = 5.5;
+    
+      alert('O aluno ' + nome + ' com ' + idade + ' anos tirou a nota ' + 5.5 );//concatenação
+      alert(`O aluno ${nome} com ${idade} anos tirou a nota ${nota}`);//template strings
+      
+      document.writeln(nome);//writeln coloca um espaço.
+      document.writeln(idade);
+      document.writeln(nota);
+      document.write('<br>');
+      document.write('<br>');
+      
+      /////////////////////////////////////////
+      var n1 = 1545.5;
+      document.write(n1);
+      document.write('<br>');
+      document.write(n1.toFixed(2));//coloca 2 casas decimais
+      document.write('<br>');
+      document.write(n1.toFixed(2).replace('.',','));//substitui o ponto por vírgula
+      document.write('<br>');
+      document.write(n1.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'}));//valor em real
+      document.write('<br>');
+      document.write(n1.toLocaleString('pt-BR', {style: 'currency', currency: 'USD'}));//valor em dolar
+      document.write('<br>');
+      document.write(n1.toLocaleString('pt-BR', {style: 'currency', currency: 'EUR'}));//valor em euro
+
+       
+   </script>
+</body>
+</html>

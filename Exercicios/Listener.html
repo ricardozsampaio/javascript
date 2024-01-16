@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>´Linstener</title>
+    <link rel="stylesheet" href="estilo1.css">
+</head>
+<body>
+    <header>
+        <h1 id="tt">Título</h1>
+    </header>
+
+
+    <section>
+        <div id="area">
+            Interaja....
+        </div>
+        <br>
+        <button id="btn">ok</button>
+        
+       
+        
+    </section>
+   
+
+
+    <footer>
+        &copy;Curso em Video
+    </footer>
+
+    <script>
+        //addEventListener - Escutar(Listener)um evento e tomar uma ação.
+        var a = document.getElementById('area');//Pegou o elemento area(colocou no objeto a)
+        a.addEventListener('click', clicar);//clicar c o mouse
+        a.addEventListener('mouseenter', entrar);//entrar c o mouse em cima do elemento.
+        a.addEventListener('mouseout', sair);//saiu c o mouse do elemento.
+
+        
+        // btn.onclick = f3;   - Primeira maneira de chamar uma função f3
+        // document.getElementById('btn').onclick = f3;  - Outra maneira de chamar função.
+        var b = document.getElementById('btn');
+        b.onclick = f3;  //Terceira maneira colocando um elemento em uma variavel(objeto)
+       
+        
+        
+        
+
+        function clicar(){
+            a.innerText = 'Clicou';
+            a.style.background = 'red'
+
+        }
+
+        function entrar(){
+            a.innerText = 'Entrou';
+
+        }
+
+        function sair(){
+            a.innerText = 'Saiu';
+            a.style.background = 'green'
+
+        }
+
+        function f3(){
+            document.getElementById('area').style.background = 'red'
+            document.body.style.background = 'yellow';
+           
+        }
+
+       
+        
+    </script> 
+</body>
+</html>

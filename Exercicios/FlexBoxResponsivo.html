@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Flex Box</title>
+        
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+            }
+            header {
+                background-color:blueviolet;
+                text-align: center;
+            }
+
+            main {
+                background-color: burlywood;
+                
+
+            }
+
+                .flexbox-container {
+                    display: flex;
+                    flex-wrap: wrap;
+                    justify-content: center;
+                    border: solid 1px black;
+                    width: 80%; /*faz a parte do q seria o container do bootstrap*/
+                    margin: 0 auto;/*alinha o q seria o container do bootstrap ao centro*/
+                    height: auto;
+
+
+                }
+
+                .flexbox {
+                    width: 300px;
+                    height: 200px;
+                    background-color: cadetblue;
+                    border-radius: 15px;
+                    margin: 2%;
+                    text-align: center; /*alinha no meio horizontal*/
+                    line-height: 200px; /*alinha no meio vertical*/
+                }
+
+           
+
+            footer {
+                color: white;
+                background-color: black;
+                text-align: center;
+            }
+           
+        </style>
+    </head>
+    <body>
+        <header>
+            <h2>Título - FlexBox</h2>
+        </header>
+
+        <main>
+            <div class="flexbox-container">
+                <div class="flexbox">
+                    Box1
+                </div>
+
+                <div class="flexbox">
+                    Box2
+                </div>
+
+                <div class="flexbox">
+                    Box3
+                </div>
+
+                <div class="flexbox">
+                    Box4
+                </div>
+
+                <div class="flexbox">
+                    Box5
+                </div>
+
+                <div class="flexbox">
+                    Box6
+                </div>
+
+                <div class="flexbox">
+                    Box7
+                </div>
+
+                <div class="flexbox">
+                    Box8
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <p>footer</p>
+        
+        </footer>
+       
+        <script>
+            
+            
+        </script>
+    </body>
+</html>
+
+
+
+
+
+
+
